@@ -1,4 +1,8 @@
 <nav class="navbar">
+    Welcome!
+    
     <a routerLink="/">Home</a>
     <a routerLink="/dashboard">Dashboard</a>
+
+    <button *ngIf="isLoggedIn$ | async" (click)="logout()">Logout</button>
 </nav>

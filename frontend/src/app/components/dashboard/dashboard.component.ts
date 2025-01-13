@@ -1,4 +1,3 @@
-// src/app/components/dashboard/dashboard.component.ts
 import { Component, OnInit } from '@angular/core';
 import { ApiService, Site } from '../../services/api.service';
 
