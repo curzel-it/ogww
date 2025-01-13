@@ -1,6 +1,7 @@
 import uuid
 from sqlalchemy import (
     Column,
+    Boolean,
     String,
     Float,
     Integer,
@@ -27,6 +28,7 @@ class User(Base):
     username = Column(String, unique=True, index=True, nullable=False)
     email = Column(String, unique=True, index=True, nullable=False)
     hashed_password = Column(String, nullable=False)
+    is_admin = Column(Boolean, nullable=False, default=True)
 
     # Relationships
     heroes = relationship(

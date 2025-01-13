@@ -4,6 +4,11 @@ Run server
 uvicorn app.main:app --reload
 ```
 
+Create migrations
+```
+alembic revision --autogenerate -m "No comment"
+```
+
 ## Curls
 Example Requests
 Here are some example requests you can make using cURL or tools like Postman:

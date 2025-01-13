@@ -1,0 +1,12 @@
+<!-- src/app/components/dashboard/dashboard.component.html -->
+<div class="dashboard-container">
+  <h2>Your Sites</h2>
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+  <ul>
+    <li *ngFor="let site of sites">
+      {{ site.name }} (ID: {{ site.id }})
+    </li>
+  </ul>
+</div>

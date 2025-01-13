@@ -8,4 +8,4 @@ bcrypt
 python-jose
 sqlalchemy-utils
 python-multipart
-'pydantic[email]'
+# 'pydantic[email]'
