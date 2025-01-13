@@ -4,6 +4,11 @@ Run server
 uvicorn app.main:app --reload
 ```
 
+Setup alembic
+```
+alembic init alembic
+```
+
 Create migrations
 ```
 alembic revision --autogenerate -m "No comment"

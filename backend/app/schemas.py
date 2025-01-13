@@ -49,6 +49,7 @@ class UserCreate(UserBase):
 
 class User(UserBase):
     id: str
+    is_admin: bool
     heroes: List[UserHeroRelationship] = []
     sites: List['Site'] = []
     armies: List['Army'] = []
