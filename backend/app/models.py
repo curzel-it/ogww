@@ -90,18 +90,18 @@ class Site(Base):
     z = Column(Integer, nullable=False)
 
     # Resources
-    stockable_metal = Column(Float, default=0.0)
-    available_metal = Column(Float, default=0.0)
-    stockable_crystals = Column(Float, default=0.0)
-    available_crystals = Column(Float, default=0.0)
-    stockable_deuterium = Column(Float, default=0.0)
-    available_deuterium = Column(Float, default=0.0)
+    available_metal = Column(Integer, default=0)
+    available_crystals = Column(Integer, default=0)
+    available_deuterium = Column(Integer, default=0)
 
     # Buildings
     beans_factory_level = Column(Integer, default=0)
     mana_extraction_plan_level = Column(Integer, default=0)
     gotcha_temple_level = Column(Integer, default=0)
     cannon_meat_farm_level = Column(Integer, default=0)
+    metal_stock_level = Column(Integer, default=0)
+    crystal_stock_level = Column(Integer, default=0)
+    deuterium_stock_level = Column(Integer, default=0)
 
     # Relationships
     owner = relationship("User", back_populates="sites")

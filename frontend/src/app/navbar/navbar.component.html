@@ -1,8 +1,16 @@
 <nav class="navbar">
     Welcome! {{ username$ | async }}
     
-    <a routerLink="/">Home</a>
-    <a routerLink="/dashboard">Dashboard</a>
+    @if (isLoggedIn$ | async) {
+        <a routerLink="/">Home</a>
+        <a routerLink="/dashboard">Dashboard</a>
+    }
 
-    <button *ngIf="isLoggedIn$ | async" (click)="logout()">Logout</button>
+    @if (isAdmin$ | async) {
+        <a routerLink="/admin">Admin</a>
+    }
+    
+    @if (isLoggedIn$ | async) {
+        <button (click)="logout()">Logout</button>
+    }
 </nav>

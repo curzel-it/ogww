@@ -73,11 +73,11 @@ class SiteCreate(SiteBase):
 class Site(SiteBase):
     id: str
     owner_id: Optional[str]
-    stockable_metal: float
+    metal_stock_level: float
     available_metal: float
-    stockable_crystals: float
+    crystal_stock_level: float
     available_crystals: float
-    stockable_deuterium: float
+    deuterium_stock_level: float
     available_deuterium: float
     beans_factory_level: int
     mana_extraction_plan_level: int

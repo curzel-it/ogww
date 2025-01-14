@@ -112,6 +112,7 @@ def create_site(
 ):
     if site.owner_id and site.owner_id != current_user.id:
         raise HTTPException(status_code=403, detail="Cannot create site for another user")
+    
     return crud.create_site(db=db, site=site)
 
 @app.get("/sites/", response_model=list[schemas.Site])
